@@ -1,0 +1,6 @@
+{
+  "name": "SMM Lead CRM",
+  "description": "Premium real-world Lead Management CRM for SMM agencies featuring lead pipelines, smart WhatsApp templates, client history timelines, follow-up alerts, ad attribution analytics, and live database persistence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
