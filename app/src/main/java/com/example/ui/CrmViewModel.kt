@@ -144,7 +144,7 @@ class CrmViewModel(application: Application) : AndroidViewModel(application) {
 
             // Sync slide-panel detail items reactively
             launch {
-                selectedLead.collect { lead ->
+                selectedLead.collectLatest { lead ->
                     if (lead != null) {
                         repository.getNotesForLead(lead.id).collect { notes ->
                             _selectedLeadNotes.value = notes
@@ -156,7 +156,7 @@ class CrmViewModel(application: Application) : AndroidViewModel(application) {
             }
 
             launch {
-                selectedLead.collect { lead ->
+                selectedLead.collectLatest { lead ->
                     if (lead != null) {
                         repository.getTimelineForLead(lead.id).collect { timeline ->
                             _selectedLeadTimeline.value = timeline

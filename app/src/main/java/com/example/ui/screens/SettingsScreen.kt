@@ -1,6 +1,5 @@
 package com.example.ui.screens
 
-import com.example.ui.Icon
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions
@@ -177,7 +176,7 @@ fun SettingsScreen(viewModel: CrmViewModel, modifier: Modifier = Modifier) {
                         horizontalArrangement = Arrangement.spacedBy(6.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Icon(imageVector = Icons.Default.Warning, contentDescription = null, size = 16.dp, tint = Color(0xFFF59E0B))
+                        Icon(imageVector = Icons.Default.Warning, contentDescription = null, modifier = Modifier.size(16.dp), tint = Color(0xFFF59E0B))
                         Text(
                             text = "Caution: This is an AI studio diagnostic interface. Storing API Keys straight inside BuildConfig are secure for sandbox modeling but should be guarded via Firebase App Check for final play store release.",
                             fontSize = 10.sp,

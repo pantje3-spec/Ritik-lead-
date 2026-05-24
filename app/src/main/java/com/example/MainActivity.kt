@@ -1,6 +1,5 @@
 package com.example
 
-import com.example.ui.Icon
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -651,7 +650,7 @@ fun LeadDetailsSlidePanel(
         ) {
             Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                    Icon(Icons.Default.AutoAwesome, "Gemini core functions icon", size = 18.dp, tint = MaterialTheme.colorScheme.primary)
+                    Icon(Icons.Default.AutoAwesome, "Gemini core functions icon", modifier = Modifier.size(18.dp), tint = MaterialTheme.colorScheme.primary)
                     Text("Social AI Smart Co-Pilot", fontWeight = FontWeight.Bold, style = MaterialTheme.typography.bodyMedium)
                 }
 
@@ -848,7 +847,7 @@ fun TimelineCardRow(event: TimelineEvent) {
                         else -> Icons.Default.History
                     },
                     contentDescription = null,
-                    size = 12.dp,
+                    modifier = Modifier.size(12.dp),
                     tint = when (event.iconType) {
                         "receive" -> Color(0xFF3B82F6)
                         "whatsapp" -> Color(0xFF10B981)
@@ -906,7 +905,7 @@ fun WhatsAppComposerDialog(
                         .background(Color(0xFF25D366), CircleShape),
                     contentAlignment = Alignment.Center
                 ) {
-                    Icon(Icons.Default.Share, "WhatsApp action visual symbol", size = 14.dp, tint = Color.White)
+                    Icon(Icons.Default.Share, "WhatsApp action visual symbol", modifier = Modifier.size(14.dp), tint = Color.White)
                 }
                 Text("WhatsApp Outreach Panel", fontWeight = FontWeight.Bold)
             }
@@ -963,7 +962,7 @@ fun WhatsAppComposerDialog(
                     modifier = Modifier.align(Alignment.End),
                     enabled = !isAiProcessing
                 ) {
-                    Icon(Icons.Default.AutoAwesome, null, size = 16.dp, tint = MaterialTheme.colorScheme.primary)
+                    Icon(Icons.Default.AutoAwesome, null, modifier = Modifier.size(16.dp), tint = MaterialTheme.colorScheme.primary)
                     Spacer(modifier = Modifier.width(4.dp))
                     Text("Rewrite with Gemini SMM AI", fontSize = 12.sp, fontWeight = FontWeight.Bold)
                 }

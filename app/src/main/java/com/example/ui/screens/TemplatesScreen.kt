@@ -1,6 +1,5 @@
 package com.example.ui.screens
 
-import com.example.ui.Icon
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -155,7 +154,7 @@ fun TemplateItemRow(template: MessageTemplate, onDelete: () -> Unit) {
                             .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.1f), RoundedCornerShape(8.dp)),
                         contentAlignment = Alignment.Center
                     ) {
-                        Icon(Icons.Default.Sms, contentDescription = null, size = 16.dp, tint = MaterialTheme.colorScheme.primary)
+                        Icon(Icons.Default.Sms, contentDescription = null, modifier = Modifier.size(16.dp), tint = MaterialTheme.colorScheme.primary)
                     }
                     Column {
                         Text(

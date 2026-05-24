@@ -1,6 +1,5 @@
 package com.example.ui.screens
 
-import com.example.ui.Icon
 import android.content.Intent
 import android.net.Uri
 import android.widget.Toast
@@ -489,13 +488,13 @@ fun LeadCard(
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                 // Source
                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                    Icon(Icons.Default.Campaign, contentDescription = null, size = 16.dp, tint = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Icon(Icons.Default.Campaign, contentDescription = null, modifier = Modifier.size(16.dp), tint = MaterialTheme.colorScheme.onSurfaceVariant)
                     Text(lead.leadSource, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
 
                 // Assigned Person
                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                    Icon(Icons.Default.AccountCircle, contentDescription = null, size = 16.dp, tint = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Icon(Icons.Default.AccountCircle, contentDescription = null, modifier = Modifier.size(16.dp), tint = MaterialTheme.colorScheme.onSurfaceVariant)
                     Text(lead.assignedTeam, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             }
@@ -594,7 +593,7 @@ fun LeadCard(
                             Icon(
                                 imageVector = Icons.Default.ArrowDropDown,
                                 contentDescription = null,
-                                size = 16.dp,
+                                modifier = Modifier.size(16.dp),
                                 tint = MaterialTheme.colorScheme.primary
                             )
                         }
@@ -646,7 +645,7 @@ fun LeadCard(
                         Icons.Default.Call,
                         contentDescription = "Contact phone dialer",
                         tint = MaterialTheme.colorScheme.primary,
-                        size = 18.dp
+                        modifier = Modifier.size(18.dp)
                     )
                 }
 
@@ -664,7 +663,7 @@ fun LeadCard(
                         Icons.Default.AutoAwesome, // Magic AI template trigger representation
                         contentDescription = "WhatsApp smart pipeline templates",
                         tint = Color(0xFF1E7E34),
-                        size = 18.dp
+                        modifier = Modifier.size(18.dp)
                     )
                 }
 
@@ -682,7 +681,7 @@ fun LeadCard(
                         Icons.Default.NoteAdd,
                         contentDescription = "Inspect client history timeline & notes",
                         tint = MaterialTheme.colorScheme.primary,
-                        size = 18.dp
+                        modifier = Modifier.size(18.dp)
                     )
                 }
             }
